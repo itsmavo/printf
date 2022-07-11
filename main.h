@@ -20,10 +20,12 @@ typedef struct print
 } print_t;
 
 /* printf.c */
+int evprintf(const char *s, int index);
 int_printf(const char *format, ...);
 unsigned int hand_buffer(char *buf, char c, unsigned int ibf);
 int print_buffer(char *buf, unsigned int nbf);
 int print_chr(va_list arguments, char *buf, unsigned int ibf);
+/*int print_int(va_list arguments, char *buf, unsigned int ibf);*/
 int print_str(va_list arguments, char *buf, unsigned int ibf);
 int print_psign(va_list __attribute__((unused)), char *, unsigned int);
 int (*get_printf(const char *s, int index))(va_list, char *, unsigned int);
