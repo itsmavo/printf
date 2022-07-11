@@ -22,6 +22,8 @@ typedef struct print
 /* printf.c */
 int evprintf(const char *s, int index);
 int _printf(const char *format, ...);
+char *fillbarr(char *binary, long int input, int neg, int lim);
+int print_binary(va_list arguments, char *buf, unsigned int ibf);
 unsigned int hand_buffer(char *buf, char c, unsigned int ibf);
 int print_buffer(char *buf, unsigned int nbf);
 int print_chr(va_list arguments, char *buf, unsigned int ibf);

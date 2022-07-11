@@ -11,7 +11,7 @@ int (*get_printf(const char *s, int index))(va_list, char *, unsigned int)
   print_t pr[] = {
 		  {"c", print_chr},{"s", print_str},
 		  {" %", print_psign},{"d", print_int},
-		  {"i", print_int},
+		  {"i", print_int}, {"b", print_binary},
 		  {NULL, NULL},
   };
 
