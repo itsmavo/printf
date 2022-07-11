@@ -7,7 +7,7 @@
  *
  * Return: index pf buffer pointer
  */
-insigned int hand_buffer(char *buf, char c, unsigned int ibf)
+unsigned int hand_buffer(char *buf, char c, unsigned int ibf)
 {
   if (ibf == 1024)
     {

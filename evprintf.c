@@ -10,7 +10,8 @@ int evprintf(const char *s, int index)
 {
   print_t pr[] = {
 		  {"c", print_chr}, {"s", print_str},
-		  {"d", print_int}, {" %", print_psign},
+		  {"d", print_int}, {"i", print_int},
+		  {" %", print_psign},
 		  {NULL, NULL},
   };
   int a = 0, b = 0, findex;
@@ -21,16 +22,16 @@ int evprintf(const char *s, int index)
       if (s[index] == pr[a].args_type[b])
 	{
 	  if (pr[a].args_type[b + 1] != '\0')
-	    index++, j++;
+	    index++, b++;
 	  else
 	    break;
 	}
       else
 	{
 	  b = 0;
-	  i++;
+	  a++;
 	  index = findex;
 	}
     }
-  return (j);
+  return (b);
 }

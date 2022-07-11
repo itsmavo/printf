@@ -10,7 +10,9 @@ int (*get_printf(const char *s, int index))(va_list, char *, unsigned int)
 {
   print_t pr[] = {
 		  {"c", print_chr},{"s", print_str},
-		  {" %", print_psign}, {NULL, NULL},
+		  {" %", print_psign},{"d", print_int},
+		  {"i", print_int},
+		  {NULL, NULL},
   };
 
   int i = 0, j = 0, findex;
@@ -32,5 +34,5 @@ int (*get_printf(const char *s, int index))(va_list, char *, unsigned int)
 	  index = findex;
 	}
     }
-  return (pr[i].findex);
+  return (pr[i].f);
 }
