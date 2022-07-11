@@ -10,7 +10,7 @@ int (*get_printf(const char *s, int index))(va_list, char *, unsigned int)
 {
   print_t pr[] = {
 		  {"c", print_chr},{"s", print_str},
-		  {" %", print_sign}, {NULL, NULL},
+		  {" %", print_psign}, {NULL, NULL},
   };
 
   int i = 0, j = 0, findex;
@@ -20,7 +20,7 @@ int (*get_printf(const char *s, int index))(va_list, char *, unsigned int)
     {
       if (s[index] == pr[i].args_type[j])
 	{
-	  if(pr[i].args_type[j + 1] != '\!0')
+	  if(pr[i].args_type[j + 1] != '\0')
 	    index++, j++;
 	  else
 	    break;
