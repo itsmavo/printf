@@ -12,7 +12,7 @@ int (*get_printf(const char *s, int index))(va_list, char *, unsigned int)
 		  {"c", print_chr},{"s", print_str},
 		  {" %", print_psign},{"d", print_int},
 		  {"i", print_int}, {"b", print_binary},
-		  {NULL, NULL},
+		  {"u", print_un_int}, {NULL, NULL},
   };
 
   int i = 0, j = 0, findex;

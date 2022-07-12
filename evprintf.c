@@ -12,7 +12,7 @@ int evprintf(const char *s, int index)
 		  {"c", print_chr}, {"s", print_str},
 		  {"d", print_int}, {"i", print_int},
 		  {" %", print_psign}, {"b", print_binary},
-		  {NULL, NULL},
+		  {"u", print_un_int}, {NULL, NULL},
   };
   int a = 0, b = 0, findex;
 
